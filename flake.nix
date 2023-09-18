@@ -18,7 +18,7 @@
         };
         packageName = "fileicon";
       in {
-        packages.fileicon = pkgs.callPackage ./${packageName}.nix {};
+        packages.${packageName} = pkgs.callPackage ./${packageName}.nix {};
         defaultPackage = self.packages.${system}.${packageName};
       });
 }
